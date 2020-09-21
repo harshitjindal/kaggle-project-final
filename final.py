@@ -22,8 +22,8 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
 from matplotlib import pyplot as plt
 from sklearn.ensemble import RandomForestClassifier as cl
 
-train_data = pd.read_csv("D:\Local_Directories\Desktop\data/train.csv")
-test_data=pd.read_csv("D:\Local_Directories\Desktop\data/test.csv")
+train_data = pd.read_csv("train.csv")
+test_data=pd.read_csv("test.csv")
 
 features = ["Weekday", "NumItems", "Return", 'ACCESSORIES',
        'AUTOMOTIVE', 'BAKERY', 'BATH AND SHOWER', 'BEAUTY', 'BEDDING',
