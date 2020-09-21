@@ -147,12 +147,6 @@ accuracy_score(train.TripType,predictions)
 predictions1 = clf.predict(np.asarray(test[features]))
 accuracy_score(test.TripType,predictions1)
 
-import keras
-from keras.models import Sequential
-from keras.layers import Dense
-from keras.utils import to_categorical
-from sklearn.preprocessing import OneHotEncoder,LabelEncoder
-from sklearn.compose import ColumnTransformer
 #for the 3 countries
 x=np.asarray(data[features])
 
@@ -196,8 +190,8 @@ accuracy_score(test.TripType,predictions1)
 
 
 data1=test_data
-dummies1 = pd.get_dummies(data1.DepartmentDescription)
-data1[dummies1.columns] = dummies1 
+# dummies1 = pd.get_dummies(data1.DepartmentDescription)
+data1[dummies.columns] = dummies
 data_dummies1 = data1.iloc[:,6:]
 data_dummies1 = data_dummies1.apply(lambda x: x*data1["ScanCount"])
 data_dummies1 = data_dummies1.replace(-0,0)
