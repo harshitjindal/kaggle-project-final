@@ -227,7 +227,7 @@ grouped1 = grouped1.agg({'Weekday': np.max, 'NumItems': np.sum, 'Return': np.max
        'SHOES': np.sum, 'SLEEPWEAR/FOUNDATIONS': np.sum, 'SPORTING GOODS': np.sum,
        'SWIMWEAR/OUTERWEAR': np.sum, 'TOYS': np.sum, 'WIRELESS': np.sum})
 
-data = grouped[["TripType", "Weekday", "NumItems", "Return",'1-HR PHOTO', 'ACCESSORIES',
+data1 = grouped1[["Weekday", "NumItems", "Return",'1-HR PHOTO', 'ACCESSORIES',
            'AUTOMOTIVE', 'BAKERY', 'BATH AND SHOWER', 'BEAUTY', 'BEDDING',
            'BOOKS AND MAGAZINES', 'BOYS WEAR', 'BRAS & SHAPEWEAR',
            'CAMERAS AND SUPPLIES', 'CANDY, TOBACCO, COOKIES', 'CELEBRATION',
@@ -249,9 +249,9 @@ data = grouped[["TripType", "Weekday", "NumItems", "Return",'1-HR PHOTO', 'ACCES
            'SHOES', 'SLEEPWEAR/FOUNDATIONS', 'SPORTING GOODS',
            'SWIMWEAR/OUTERWEAR', 'TOYS', 'WIRELESS']]
 
-data=data.dropna()
+data1=data1.dropna()
 
-data=data.sample(frac=1)
+data1=data1.sample(frac=1)
 
 
 def transform(day,no):
